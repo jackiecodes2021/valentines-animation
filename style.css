@@ -1,0 +1,88 @@
+body{
+    /* background-color: purple; */
+    margin: 8rem;
+}
+.container{
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: flex-start;
+    /* margin: 8rem; */
+
+}
+#heart {
+     position:relative; 
+     /* width:100px; 
+     height:90px; */
+     margin-top:10px; 
+}
+
+#heart::before, #heart::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 52px;
+    height: 80px;
+    border-radius: 50px 50px 0 0;
+    background: red;
+  }
+
+  #heart::before {
+    left: 50px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }  
+
+  #heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+  
+
+.content{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Redressed', cursive;
+    font-size: 46px;
+    animation-name: rainbow;
+    animation-duration: 5s;
+
+
+}
+/* .cont-tog{
+    text-align: center;
+    display: flex;
+    font-family: 'Redressed', cursive;
+    font-size: 46px;
+
+
+
+    animation-name: rainbow;
+animation-duration: 5s; */
+
+}
+
+#happy{
+/* color: green; */
+    animation-name: rainbow;
+    /* animation-duration: 5s; */
+    animation-iteration-count: infinite;
+}
+
+@keyframes rainbow{
+    0%{
+        color: red;
+        top: 0px;
+    }
+    50%{
+        color: white;
+        top: 50px;
+    }
+    100%{
+        color: black;
+        top: 0px;
+    }
+}
